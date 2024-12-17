@@ -107,7 +107,7 @@ body {
 .btn-custom {
   margin-left: 65%;
   background-color: #c6a47e;
-  color: #48423b;
+  color: #000000;
   border: none;
   padding: 0.5rem 4rem;
   font-weight: bold;
@@ -141,6 +141,8 @@ textarea.form-control:focus {
   background-color: transparent; /* 背景色保持透明 */
   color: white; /* 文字顏色仍為白色 */
 }
+
+
 /* 設定提示文字顏色 */
 input::placeholder {
   color: white; /* 提示文字顏色設為白色 */
@@ -153,3 +155,78 @@ input::placeholder {
 #footer a,p{
   letter-spacing:1.5px;
 }
+
+
+
+/*懸浮按鈕*/
+.floating-chat-btn {
+  position: fixed; /* 固定在螢幕上 */
+  bottom: 30px; /* 距離底部 30px */
+  right: 100px; /* 距離右側 30px */
+  background-color: #D2A679; /* 背景顏色 */
+  color: #000; /* 文字與 icon 顏色 */
+  border: 1px solid #000; /* 邊框顏色 */
+  padding: 10px 20px; /* 內邊距 */
+  display: flex; /* 彈性盒模型，用於對齊 icon 與文字 */
+  align-items: center; /* 垂直置中 */
+  gap: 10px; /* icon 與文字間隔 */
+  font-family: Arial, sans-serif; /* 字體 */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none; /* 移除連結底線 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+  z-index: 999; /* 確保按鈕顯示在最上層 */
+}
+
+.floating-chat-btn:hover {
+  background-color: #C18E5B; /* 改變背景顏色 */
+  color: #fff; /* 改變文字顏色 */
+  border-color: #fff;
+}
+/*懸浮按鈕*/
+
+
+/*聊天欄位*/
+.chatbox {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 300px;
+  background-color: #4b4a4a;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: none; /* 預設隱藏 */
+  z-index: 1000;
+}
+
+.chatbox-header {
+  background-color: #D2A679;
+  color: #000;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chatbox-body {
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.chatbox-input {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #080808;
+  font-size: 14px;
+}
+
+.chatbox-input:focus {
+  outline: none;
+}
+
+/*聊天欄位*/
