@@ -14,7 +14,7 @@
   animation: fadeOut 3s ease 8s forwards; /* 延遲3秒後淡出 */
 }
 
-/* 主畫面容器的初始樣式 
+/* 主畫面容器的初始樣式 */
 #main-content {
   opacity: 0; /* 初始完全透明 */
   animation: fadeIn 2s ease-in-out 2.5s forwards; /* 2.5秒延遲後，2秒淡入動畫 */
@@ -370,9 +370,10 @@ p {
 
 
 .paragraph-style {
+  margin-top: 20px;
   color: #e4e4f0; /* 接近白色的文字顏色 */
   font-family: Arial, Helvetica, sans-serif; /* 無襯線字體 */
-  font-size: 14px; /* 字體大小 */
+  font-size: 16px; /* 字體大小 */
   line-height: 1.8; /* 行距，讓文字更易讀 */
   text-align: left; /* 左對齊 */
   margin: 0; /* 移除段落預設外邊距 */
@@ -414,11 +415,22 @@ p {
   color: #957b5f; /* 數字的顏色 */
 }
 .date {
+  margin-top: 30px;
   font-size: 1rem; /* 調整日期大小 */
   color: #b3b3b3; /* 日期的顏色 */
 }
 .paragraph {
-  font-size: 1rem; /* 調整段落文字大小 */
+  font-size: 15px; /* 調整段落文字大小 */
   color: #e4e4e4; /* 段落文字顏色 */
-  margin-top: 1rem;
+  margin-top: 50px;
+}
+
+.readmore{
+  font-size: 15px; /* 調整段落文字大小 */
+  color: #e4e4e4; /* 段落文字顏色 */
+  margin-top: 150px;
+}
+
+.readmore:hover{
+  color: #957b5f;
 }
