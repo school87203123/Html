@@ -200,7 +200,7 @@ body {
   /*聊天欄位*/
   .chatbox {
     position: fixed;
-    bottom: 40%;
+    bottom: 30%;
     right: 30px;
     width: 300px;
     background-color: #4b4a4a;
