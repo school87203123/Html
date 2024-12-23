@@ -1,0 +1,428 @@
+.imgimg {
+  height: 500px; width: 900px
+}
+
+.info-section {
+  padding: 50px;
+}
+
+.info-title {
+  letter-spacing: 4px;
+  color: #ffffff; /* 銅金色 */
+  font-size: 24px;
+}
+
+.info-location {
+  color: #d1a87c;
+  letter-spacing: 4px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.info-date {
+  color: #ffffff;
+  letter-spacing: 4px;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.info-back {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #ffffff;
+  text-decoration: none
+}
+
+.info-back:hover {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #d1a87c;
+  text-decoration: none
+}
+
+.content {
+  letter-spacing: 2;
+  color: #ffffff;
+  line-height: 1.8;
+}
+/*進場動畫*/
+#intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* 確保覆蓋其他內容 */
+  animation: fadeOut 3s ease 8s forwards; /* 延遲3秒後淡出 */
+}
+
+/* 主畫面容器的初始樣式 */
+#main-content {
+  opacity: 0; /* 初始完全透明 */
+  animation: fadeIn 0.5s ease-in-out 0.5s forwards; /* 2.5秒延遲後，2秒淡入動畫 */
+} 
+
+/* 定義淡入動畫的關鍵幀 */
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* 最終完全不透明 */
+  }
+}
+/* 全域背景顏色 */
+body {
+    background-color: #2b2b2b; /* 整體背景 */
+  }
+  /* 中間網頁主要內容區塊 */
+  #body {
+    width: fit-content; /* 根據內容自動調整寬度 */
+    margin-top: 160px;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    background-color: #2b2b2b;
+  }
+  
+  /* 導覽列背景顏色 */
+  .navbar {
+    background-size: cover; /* 讓背景圖片自動適應大小 */
+    background-color: #2b2b2b; /* 頂部導覽背景色 */
+    height: 105px;
+  }
+  
+  /* LOGO 樣式 */
+  .navbar-brand {
+    margin-right: -20px;
+    color: #d1a87c; /* LOGO 顏色 */
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  /* 導覽連結樣式 */
+  .navbar-nav .nav-link {
+    margin-right: 100px;
+    margin: 50px;
+    letter-spacing: 2px; /* 增加字母間距 */
+    color: #777; /* 預設灰色 */
+    text-transform: uppercase; /* 字母大寫 */
+    margin-right: 20px;
+    transition: color 0.3s ease; /* 顏色變化過渡效果 */
+  }
+  
+  /* 選中/懸停連結樣式 */
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:hover {
+    color: #d1a87c; /* 選中/滑鼠懸停的顏色 */
+  }
+  
+  .container {
+    max-width: 1040px; /* 自定義寬度，可以根據需求調整 */
+    padding-left: 2rem; /* 左側內邊距 */
+    padding-right: 2rem; /* 右側內邊距 */
+  }
+  
+  .roboto-slab-nav-link {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 20;
+    font-style: normal;
+  }
+  
+  /* Roboto Slab 標準字體 */
+  .roboto-slab-regular {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* 標準字重 */
+    font-style: normal;
+  }
+  
+  /* Roboto Slab 粗體字 */
+  .roboto-slab-bold {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* 粗體字重 */
+    font-style: normal;
+  }
+  
+  /* Roboto Slab 特殊標題樣式 */
+  .roboto-slab-title {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600; /* 中等粗細 */
+    font-style: normal;
+    font-size: 1.5rem;
+    letter-spacing: 1px; /* 字母間距 */
+    text-transform: uppercase; /* 轉換成大寫 */
+  }
+  
+  /* Footer 樣式 */
+  .footer {
+    background-color: #000;
+    color: #bababa;
+  }
+  
+  .footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .btn-custom {
+    margin-left: 65%;
+    background-color: #c6a47e;
+    color: #000000;
+    border: none;
+    padding: 0.5rem 4rem;
+    font-weight: bold;
+  }
+  
+  .btn-custom:hover {
+    background-color: #b98f72;
+    color: #fff;
+  }
+  
+  /* 修改輸入框的邊框顏色 */
+  input.form-control {
+    border: 0.5px solid rgb(250, 250, 250); /* 設定邊框為黑色 */
+    color: white; /* 設定文字顏色為白色 */
+    background-color: transparent; /* 背景色透明 */
+  }
+  textarea.form-control {
+    border: 0.5px solid rgb(250, 250, 250); /* 設定邊框為黑色 */
+    color: white; /* 設定文字顏色為白色 */
+    background-color: transparent; /* 背景色透明 */
+  }
+  /* 當輸入框被聚焦（點擊或選中）時，保持黑色邊框 */
+  input.form-control:focus {
+    border: 0.5px solid black; /* 當點擊時，邊框顏色保持為黑色 */
+    background-color: transparent; /* 背景色保持透明 */
+    color: white; /* 文字顏色仍為白色 */
+  }
+  
+  textarea.form-control:focus {
+    border: 0.5px solid black; /* 當點擊時，邊框顏色保持為黑色 */
+    background-color: transparent; /* 背景色保持透明 */
+    color: white; /* 文字顏色仍為白色 */
+  }
+  
+  /* 設定提示文字顏色 */
+  input::placeholder {
+    color: white; /* 提示文字顏色設為白色 */
+  }
+  
+  #foo h5 {
+    letter-spacing: 3px; /*字間空隙*/
+  }
+  
+  #footer a,
+  p {
+    letter-spacing: 1.5px;
+  }
+  
+  /*懸浮按鈕*/
+  .floating-chat-btn {
+    /* 现有样式 */
+    position: fixed;
+    bottom: 20%;
+    right: 100px;
+    background-color: #d2a679;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+  }
+  
+  .floating-chat-btn:hover {
+    background-color: #c18e5b;
+    color: #fff;
+    border-color: #fff;
+    transform: translateY(-5px); /* 悬停时向上移动 */
+  }
+  
+  .floating-chat-btn:hover {
+    background-color: #c18e5b; /* 改變背景顏色 */
+    color: #fff; /* 改變文字顏色 */
+    border-color: #fff;
+  }
+  /*懸浮按鈕*/
+  
+  /*聊天欄位*/
+  .chatbox {
+    position: fixed;
+    bottom: 25%;
+    right: 30px;
+    width: 300px;
+    background-color: #4b4a4a;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1000;
+    pointer-events: none; /* 防止隐藏状态下的元素响应鼠标事件 */
+  }
+  
+  .chatbox.show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto; /* 允许显示状态下的元素响应鼠标事件 */
+  }
+  
+  .chatbox-header {
+    background-color: #d2a679;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .chatbox-body {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+  }
+  
+  .chatbox-input {
+    border: none;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #080808;
+    font-size: 14px;
+  }
+  
+  .chatbox-input:focus {
+    outline: none;
+  }
+  
+  /*聊天欄位*/
+  
+  /*中間內容*/
+  
+  .section-title {
+    color: #d4a373; /* 標題金色調 */
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 10px;
+  }
+  
+  .section-a p{
+    color: #e4e4f0;
+    text-align: left;
+    margin-left: 52px;
+    margin-bottom: 30px;
+  }
+  .project-image {
+    background: url(../img/footer.png) center center/cover no-repeat; /* 替換為圖片網址 */
+    background-size: cover;
+    text-align: left;
+    margin-left: 8%;
+    height:410px;
+    width: 500px;
+  }
+  .project-description h5 {
+    color: #d1a87c; /* 金色標題 */
+  }
+  
+  .left-img {
+    padding-right: 15px; /* 調整左側圖片與右邊文字的間距 */
+  }
+  
+  .right-cribe {
+    padding-left: 15px; /* 減少右側描述區的內邊距 */
+    margin-left: -40px; /* 可選：進一步讓文字靠近圖片 */
+  }
+  
+  
+  .paragraph-style {
+    margin-top: 20px;
+    color: #e4e4f0; /* 接近白色的文字顏色 */
+    font-family: Arial, Helvetica, sans-serif; /* 無襯線字體 */
+    font-size: 16px; /* 字體大小 */
+    line-height: 1.8; /* 行距，讓文字更易讀 */
+    text-align: left; /* 左對齊 */
+    margin: 0; /* 移除段落預設外邊距 */
+    padding: 0; /* 移除段落預設內邊距 */
+  }
+  
+  
+  .featured-title {
+    color: #dadae0; /* 文字顏色：接近白色 */
+    font-family: Arial, Helvetica, sans-serif; /* 字體：無襯線字體 */
+    font-size: 20px; /* 字體大小 */
+    letter-spacing: 4px; /* 文字之間的間距 */
+    text-transform: uppercase; /* 全部轉為大寫 */
+    text-align: center; /* 置中對齊（可選） */
+    margin: 0; /* 移除預設外邊距 */
+    padding: 0; /* 移除預設內邊距 */
+  }
+  
+  .viewproject {
+    text-decoration: none;
+    color: white; /* 預設顏色 */
+    margin-top: 40px;
+    font-size: 16px;
+    transition: color 0.3s ease; /* 添加平滑過渡效果 */
+  }
+  
+  /* 滑鼠移過去時變色 */
+  .viewproject:hover {
+    color: #957b5f; /* 滑鼠懸停時的顏色 */
+  }
+  
+  #row2{
+    margin-top: 50px;
+  }
+  
+  .number {
+    font-size: 5rem; /* 調整數字大小 */
+    font-weight: bold;
+    color: #957b5f; /* 數字的顏色 */
+  }
+  .date {
+    margin-top: 30px;
+    font-size: 1rem; /* 調整日期大小 */
+    color: #b3b3b3; /* 日期的顏色 */
+  }
+  .paragraph {
+    font-size: 15px; /* 調整段落文字大小 */
+    color: #e4e4e4; /* 段落文字顏色 */
+    margin-top: 50px;
+  }
+  
+  .readmore{
+    font-size: 15px; /* 調整段落文字大小 */
+    color: #e4e4e4; /* 段落文字顏色 */
+    margin-top: 150px;
+  }
+  
+  .readmore:hover{
+    color: #957b5f;
+  }

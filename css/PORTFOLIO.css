@@ -31,8 +31,16 @@
   opacity: 1;
 }
 
-.photo-text {
-  color: white;
+.photo-text a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.photo-text a:hover{
+  color: #d1a87c;
+  text-decoration: none;
   font-size: 10rem;
   font-weight: bold;
 }
