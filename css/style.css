@@ -245,7 +245,7 @@ p {
 .floating-chat-btn {
   /* 现有样式 */
   position: fixed;
-  bottom: 70%;
+  bottom: 20%;
   right: 100px;
   background-color: #d2a679;
   color: #000;
@@ -281,7 +281,7 @@ p {
 /*聊天欄位*/
 .chatbox {
   position: fixed;
-  bottom: 30%;
+  bottom: 25%;
   right: 30px;
   width: 300px;
   background-color: #4b4a4a;
@@ -348,7 +348,24 @@ p {
   margin-bottom: 30px;
 }
 .project-image {
-  background: url(../img/footer.png) center center/cover no-repeat; /* 替換為圖片網址 */
+  background: url(../img/pexels-misael-garcia-832776-1707823.jpg) center center/cover no-repeat; /* 替換為圖片網址 */
+  background-size: cover;
+  text-align: left;
+  margin-left: 8%;
+  height:410px;
+  width: 500px;
+}
+
+.project-image2 {
+  background: url(../img/pexels-camcasey-1722183.jpg) center center/cover no-repeat; /* 替換為圖片網址 */
+  background-size: cover;
+  text-align: left;
+  margin-left: 8%;
+  height:410px;
+  width: 500px;
+}
+.project-image3 {
+  background: url(../img/pexels-daria-agafonova-2147746189-29854153.jpg) center center/cover no-repeat; /* 替換為圖片網址 */
   background-size: cover;
   text-align: left;
   margin-left: 8%;

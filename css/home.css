@@ -1,4 +1,84 @@
+/*進場動畫*/
+#intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* 確保覆蓋其他內容 */
+  animation: fadeOut 3s ease 8s forwards; /* 延遲3秒後淡出 */
+}
 
+/* 主畫面容器的初始樣式 */
+#main-content {
+  opacity: 0; /* 初始完全透明 */
+  animation: fadeIn 0.5s ease-in-out 0.5s forwards; /* 2.5秒延遲後，2秒淡入動畫 */
+} 
+
+/* 定義淡入動畫的關鍵幀 */
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* 最終完全不透明 */
+  }
+}
+
+/* 文字樣式與動畫 */
+.intro-text p {
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 10px; /*字間空隙*/
+  animation: fadeInSteps 2.5s linear infinite; /* 3秒的動畫週期，線性過渡，無限循環 */
+}
+
+/* 定義動畫的關鍵幀 */
+@keyframes fadeInSteps {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+  120% {
+    opacity: 0.8;
+  }
+  140% {
+    opacity: 0.6;
+  }
+  160% {
+    opacity: 0.4;
+  }
+  180% {
+    opacity: 0.2;
+  }
+  200% {
+    opacity: 0;
+  }
+}
+
+/* 背景淡出效果 */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 /* 全域背景顏色 */
 body {
@@ -165,7 +245,7 @@ p {
 .floating-chat-btn {
   /* 现有样式 */
   position: fixed;
-  bottom: 70%;
+  bottom: 20%;
   right: 100px;
   background-color: #d2a679;
   color: #000;
@@ -201,7 +281,7 @@ p {
 /*聊天欄位*/
 .chatbox {
   position: fixed;
-  bottom: 30%;
+  bottom: 25%;
   right: 30px;
   width: 300px;
   background-color: #4b4a4a;
@@ -268,7 +348,24 @@ p {
   margin-bottom: 30px;
 }
 .project-image {
-  background: url(../img/footer.png) center center/cover no-repeat; /* 替換為圖片網址 */
+  background: url(../img/pexels-misael-garcia-832776-1707823.jpg) center center/cover no-repeat; /* 替換為圖片網址 */
+  background-size: cover;
+  text-align: left;
+  margin-left: 8%;
+  height:410px;
+  width: 500px;
+}
+
+.project-image2 {
+  background: url(../img/pexels-camcasey-1722183.jpg) center center/cover no-repeat; /* 替換為圖片網址 */
+  background-size: cover;
+  text-align: left;
+  margin-left: 8%;
+  height:410px;
+  width: 500px;
+}
+.project-image3 {
+  background: url(../img/pexels-daria-agafonova-2147746189-29854153.jpg) center center/cover no-repeat; /* 替換為圖片網址 */
   background-size: cover;
   text-align: left;
   margin-left: 8%;
