@@ -63,9 +63,10 @@ html{
 .btn>i{
     margin-left: 10px;
 }
-.btn:hover{
-    background: var(--second-color);
-    color: var(--color-white);
+.btn:hover {
+    background: var(--first-color);
+    transform: translateY(-5px); /* 懸浮向上移動 */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* ----- GLOBAL ICONS DESIGN ----- */
@@ -207,11 +208,17 @@ nav{
     background: var(--first-color-hover);
 }
 .social_icons{
+    text-decoration: none;
     display: flex;
     margin-top: 5em;
     gap: 30px;
 }
+.icon a:hover {
+    color: inherit; /* 移除懸停時的顏色變化 */
+}
 .icon{
+    text-decoration: none; /* 移除下劃線 */
+    color: inherit; /* 繼承父元素的顏色 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,6 +228,19 @@ nav{
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+.icon a{
+    text-decoration: none; /* 移除下劃線 */
+    color: inherit; /* 繼承父元素的顏色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
 .icon:hover{
     color: var(--first-color);
 }
@@ -245,6 +265,17 @@ nav{
     width: 380px;
     height: 380px;
     object-fit: cover;
+    animation: floating 3s ease-in-out infinite;
+
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 @keyframes imgFloat {
     50%{
@@ -521,6 +552,7 @@ footer{
     margin-inline: 20px;
 }
 .footer-social-icons{
+    text-decoration: none;
     display: flex;
     gap: 30px;   
 }
@@ -635,4 +667,13 @@ footer{
     .input-field{
         width: 100%;
     }
+}
+
+.iconn a {
+    text-decoration: none; /* 移除下劃線 */
+    color: inherit; /* 繼承父元素的顏色 */
+}
+
+.iconn a:hover {
+    color: inherit; /* 移除懸停時的顏色變化 */
 }

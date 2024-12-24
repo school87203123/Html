@@ -30,10 +30,27 @@ function myMenuFunction(){
     }
   }
 
+  window.addEventListener("scroll", function () {
+    const nav = document.querySelector("nav");
+    const navLinks = document.querySelectorAll(".nav-link"); // 選擇所有導航連結
+    if (window.scrollY > 50) {
+        nav.style.backgroundColor = "rgba(30, 30, 30, 0.9)";
+        nav.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.3)";
+        navLinks.forEach(link => {
+            link.style.color = "white"; // 改變字體顏色為白色
+        });
+    } else {
+        nav.style.backgroundColor = "transparent";
+        nav.style.boxShadow = "none";
+        navLinks.forEach(link => {
+            link.style.color = "rgba(68, 68, 68, 1)"; // 恢復原本的字體顏色
+        });
+    }
+});
 
 /* ----- TYPING EFFECT ----- */
  var typingEffect = new Typed(".typedText",{
-    strings : ["Student","esigner","Developer"],
+    strings : ["陳品霖","亞東科大資管系學生"],
     loop : true,
     typeSpeed : 100, 
     backSpeed : 80,
